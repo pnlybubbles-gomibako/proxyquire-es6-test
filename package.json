@@ -23,6 +23,7 @@
     "babel-register": "^6.7.2",
     "babelify": "^7.3.0",
     "exorcist": "^0.4.0",
+    "lodash.isplainobject": "^4.0.4",
     "mocha": "^2.4.5",
     "nyc": "bcoe/nyc#b5907adbd638d774629e12dc00080e7fe132c7df",
     "proxyquire": "^1.7.4",

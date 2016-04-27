@@ -1,29 +1,16 @@
 import test from 'ava';
 // import assert from 'assert';
-import proxyquire from 'proxyquire';
+import proxyquire from './proxyquire-babel';
 
-const aMock = {
-  default: (x) => {
-    return x * 5;
-  },
-};
+function aMock(x) {
+  return x * 5;
+}
 
-class KlassMock_ {
+class KlassMock {
   constructor() {
     this.x = 1;
   }
 }
-
-const KlassMock = {
-  default: KlassMock_,
-};
-
-// ok
-// const KlassMock = {
-//   default() {
-//     this.x = 1;
-//   },
-// };
 
 const obj1Mock = {
   value: 1,
@@ -42,13 +29,8 @@ const main = proxyquire('../src/main', {
   './a': aMock,
   './klass': KlassMock,
   './no-default': noDefaultMock,
-}).default;
+});
 
 test('test', (t) => {
   t.truthy(main(2) === 24);
 });
-
-// for mocha (test2)
-// it('test', () => {
-//   assert(main(2) === 21);
-// });
