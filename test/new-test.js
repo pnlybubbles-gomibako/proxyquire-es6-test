@@ -1,5 +1,4 @@
 import test from 'ava';
-// import assert from 'assert';
 import proxyquire from './proxyquire-babel';
 
 function aMock(x) {

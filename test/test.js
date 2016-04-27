@@ -1,5 +1,4 @@
 import test from 'ava';
-// import assert from 'assert';
 import proxyquire from 'proxyquire';
 
 const aMock = {
@@ -17,13 +16,6 @@ class KlassMock_ {
 const KlassMock = {
   default: KlassMock_,
 };
-
-// ok
-// const KlassMock = {
-//   default() {
-//     this.x = 1;
-//   },
-// };
 
 const obj1Mock = {
   value: 1,
@@ -47,8 +39,3 @@ const main = proxyquire('../src/main', {
 test('test', (t) => {
   t.truthy(main(2) === 24);
 });
-
-// for mocha (test2)
-// it('test', () => {
-//   assert(main(2) === 21);
-// });

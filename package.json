@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "test": "ava --require babel-register ./test/**/*test.js",
-    "test2": "_mocha --compilers js:babel-register ./test/**/*test.js",
     "cover": "nyc --all --reporter=lcov --reporter=text npm test",
     "watch": "watchify -v -d index.babel.js -t [ babelify ] -o 'exorcist index.js.map > index.js'"
   },
@@ -24,7 +23,6 @@
     "babelify": "^7.3.0",
     "exorcist": "^0.4.0",
     "lodash.isplainobject": "^4.0.4",
-    "mocha": "^2.4.5",
     "nyc": "bcoe/nyc#b5907adbd638d774629e12dc00080e7fe132c7df",
     "proxyquire": "^1.7.4",
     "watchify": "^3.7.0"
